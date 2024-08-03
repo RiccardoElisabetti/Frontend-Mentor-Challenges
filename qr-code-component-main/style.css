@@ -1,18 +1,81 @@
-:root{
-    --color-white: hsl(0, 0%, 100%);
-    
-    --slate-300:hsl(212, 45%, 89%) ;
-    --slate-500: hsl(216, 15%, 48%);
-    --slate-900: hsl(218, 44%, 22%);
+/*CSS Reset*/
 
-    --width-mobile: 375px;
-    --width-desktop: 1440px;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
 }
 
-.attribution {
-	font-size: 11px;
+:root {
+	--color-white: hsl(0, 0%, 100%);
+
+	--slate-300: hsl(212, 45%, 89%);
+	--slate-500: hsl(216, 15%, 48%);
+	--slate-900: hsl(218, 44%, 22%);
+
+	--width-mobile: 375px;
+	--width-desktop: 1440px;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--slate-300);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	height: 499px;
+	width: 320px;
+	background-color: var(--color-white);
+	border-radius: 20px;
+	box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.43);
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card-text {
+	padding: 5px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-family: "Outfit", sans-serif;
 	text-align: center;
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
+
+.card-text p:nth-of-type(1) {
+	font-weight: 700;
+	color: var(--slate-900);
+	font-size: 22px;
+}
+
+.card-text p:nth-of-type(2) {
+	font-weight: 400;
+	color: var(--slate-500);
+	font-size: large;
+}
+
+.qr-code {
+	background-color: red;
+	background-image: url("./images/image-qr-code.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 10px;
 }
